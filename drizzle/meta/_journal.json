@@ -15,6 +15,13 @@
       "when": 1780497714733,
       "tag": "0001_short_red_skull",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1780545569058,
+      "tag": "0002_fair_bastion",
+      "breakpoints": true
     }
   ]
 }

@@ -1,0 +1,1 @@
+ALTER TABLE "events" ADD COLUMN "tag" varchar(100) DEFAULT 'Workshop' NOT NULL;
