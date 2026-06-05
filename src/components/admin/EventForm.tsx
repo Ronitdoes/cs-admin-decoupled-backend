@@ -22,6 +22,7 @@ export default function EventForm({ initialData, onSubmit, submitLabel }: EventF
     coverImage: initialData?.coverImage || '',
     eventDate: initialData?.eventDate ? new Date(initialData.eventDate).toISOString().substring(0, 16) : '',
     featured: initialData?.featured || false,
+    showInCardStack: initialData?.showInCardStack || false,
     status: initialData?.status || 'draft',
     tag: initialData?.tag || 'Workshop',
   });
@@ -155,6 +156,19 @@ export default function EventForm({ initialData, onSubmit, submitLabel }: EventF
           />
           <label htmlFor="featured" className="text-sm text-gray-300 font-medium cursor-pointer">
             Feature this event on Homepage
+          </label>
+        </div>
+
+        <div className="flex items-center gap-3 pt-6">
+          <input
+            type="checkbox"
+            id="showInCardStack"
+            checked={formData.showInCardStack}
+            onChange={(e) => setFormData({ ...formData, showInCardStack: e.target.checked })}
+            className="w-4 h-4 rounded border-[#222] bg-[#080808] text-[#f9ba1f] focus:ring-[#f9ba1f] focus:ring-offset-0 focus:outline-none accent-[#f9ba1f]"
+          />
+          <label htmlFor="showInCardStack" className="text-sm text-gray-300 font-medium cursor-pointer">
+            Show in Card Stack (Home Page)
           </label>
         </div>
       </div>

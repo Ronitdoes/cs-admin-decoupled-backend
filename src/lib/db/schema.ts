@@ -45,6 +45,7 @@ export const events = pgTable('events', {
   eventDate: timestamp('event_date').notNull(),
   displayOrder: integer('display_order').notNull().default(0),
   featured: boolean('featured').notNull().default(false),
+  showInCardStack: boolean('show_in_card_stack').notNull().default(false),
   status: varchar('status', { length: 50 }).notNull().default('draft'),
   tag: varchar('tag', { length: 100 }).notNull().default('Workshop'),
   createdAt: timestamp('created_at').notNull().defaultNow(),

@@ -1,0 +1,1 @@
+ALTER TABLE "events" ADD COLUMN "show_in_card_stack" boolean DEFAULT false NOT NULL;
